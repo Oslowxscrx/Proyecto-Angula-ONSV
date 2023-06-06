@@ -5,6 +5,7 @@ import { PagesComponent } from 'src/app/pages/pages.component';
 import { DashboardComponent } from 'src/app/pages/dashboard/dashboard.component';
 import { ProductsComponent } from 'src/app/pages/products/products.component';
 import { CategoriesComponent } from 'src/app/pages/categories/categories.component';
+import { SellerComponent } from './seller/seller.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,8 @@ const routes: Routes = [
       { path: '', component: DashboardComponent},
       { path: 'product', component: ProductsComponent},
       { path: 'category', component: CategoriesComponent},
+      { path: 'seller', component: SellerComponent},
+
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       //    {path: '**', component:NoPagesFoundComponent},
     ]},
