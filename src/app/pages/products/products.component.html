@@ -1,22 +1,27 @@
-<form>
-    <div class="mb-3">
-      <label for="" class="form-label">Producto</label>
-      <br>
-      <select id="" class="input input-primary">
-        <option selected>Cocina</option>
-        <option value="1">Refrigeradora</option>
-        <option value="2">Microondas</option>
-        <option value="3">Lavadora</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <label for="" class="form-label">Fecha de venta</label>
-      <input type="date" class="form-control" id="">
-    </div>
-    <div class="mb-3">
-      <label for="" class="form-label">Precio</label>
-      <input type="number " class="form-control" id="">
-    </div>
-  
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-primary border:1px">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Descripcion</th>
+                <th>Imagen</th>
+                <th>Categoria</th>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class=""  *ngFor="let product of products">
+                <td> {{product.title}} </td>
+                <td> {{product.price}} </td>
+                <td> {{product.description}} </td>
+                <td><img src="{{product.images}} " alt="" width="200px" height="200px" > </td>
+                <td> {{product.category}} </td>
+                <td><a href="" (click)="deleteProduct(product.id)">Eliminar</a></td>
+                <td> Editar </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
